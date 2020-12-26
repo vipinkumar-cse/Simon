@@ -12,6 +12,7 @@ body{
   border: 10px solid black;
   display: inline-block;
   border-radius : 25%;
+  outline: none;
 }
 /* .row{
   margin: 10px;
