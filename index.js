@@ -16,7 +16,7 @@ $("body").keypress(function(value){
 
 
       $("#heading").text("Level " + level);
-    console.log(level);
+
 
     }
 
@@ -33,7 +33,7 @@ $(".btn").click(function guess(x)
       setTimeout(function () {
         $("."+x.target.classList[1]).removeClass("pressed");
       }, 100);
-      console.log(x.target.classList[1]);
+
       guessed.push(parseInt(x.target.classList[1]));
       clickcount++;
 checker();
@@ -87,7 +87,7 @@ function sequence(){
 function blink(i){
   setTimeout(function () {
     $("."+collections[i]).fadeIn(100).fadeOut(100).fadeIn(100);
-    console.log(i);
+
   }, 600);
 }
 
@@ -99,18 +99,17 @@ function checker(){
           $("#heading").text("Level " + level);
       }, 150);
 
-      console.log("Your level is now"+level);
         guessed =[]
   sequence();
 
   }
   else if(collections[clickcount-1]==guessed[clickcount-1]){
-console.log("right");
+
   }
 
   //if in any case the selcted is not equals as in collections if will set won as false and say start over
   else{
-    console.log("sorry startover()");
+
     $("body").addClass("game-over");
       $("#heading").text("Press A key to start again");
     setTimeout(function () {
