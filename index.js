@@ -23,6 +23,22 @@ $("body").keypress(function(value){
 
   })
 
+  $("#heading").click(function(){
+if(start==false){
+  start=true;
+    level++;
+  sequence();
+
+
+  $("#heading").text("Level " + level);
+
+
+}
+
+
+
+  })
+
 
   //functions
 
